@@ -35,4 +35,8 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here] 
+
+
+TF Notes:
+The biggest thing students need to walk away understanding is that working code and correct code are not the same thing — this game runs fine, it just lies to you the entire time. The trickiest bug to catch is the string comparison one, where the secret gets converted to a string on even attempts and Python starts sorting alphabetically instead of numerically, so "9" beats "10" and everything breaks in a way that's really hard to spot just by reading. AI was actually pretty useful here for the obvious stuff — it flagged the inverted hints and the hardcoded UI text without much prompting — but it got it wrong on the scoring fix, suggesting we flip the sign on the even-attempt condition instead of just deleting it, which would've kept the scoring weird in a different way. That's a good moment to point students to when they ask why they can't just trust whatever Copilot spits out. If a student is stuck and frustrated, my go-to is to ask them what check_guess actually returns when guess is 60 and secret is 50 — just tracing through one real example by hand usually gets them there without me having to spell it out.
